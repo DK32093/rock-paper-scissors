@@ -12,4 +12,9 @@ function getComputerChoice(n) {
     }
 }
 
-console.log(getComputerChoice(Math.random() * 100));
+// assign the computer choice to a variable //
+computerChoice = getComputerChoice(Math.random() * 100)
+
+console.log(computerChoice)
+
+// Assignment Step 3 //
