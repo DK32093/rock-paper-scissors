@@ -1,8 +1,7 @@
 
-// Assignment Step 2 //
-
 // Create computer choice function //
-function getComputerChoice(n) {
+function getComputerChoice() {
+    let n = Math.random() * 100;
     if (n <= 33) {
         return "rock";
     } else if (n > 33 && n <= 66) {
@@ -12,9 +11,19 @@ function getComputerChoice(n) {
     }
 }
 
-// assign the computer choice to a variable //
-computerChoice = getComputerChoice(Math.random() * 100)
+console.log(getComputerChoice())
 
-console.log(computerChoice)
+// Create human choice function //
 
-// Assignment Step 3 //
+function getHumanChoice() {
+    let answer = prompt("Enter rock, paper, or scissors").toLowerCase();
+    if (!(answer === "paper" || answer === "rock" || answer === "scissors")) {
+       return getHumanChoice();
+    } else {
+        return answer;
+    } 
+}
+
+console.log(getHumanChoice())
+
+
