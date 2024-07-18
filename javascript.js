@@ -15,6 +15,7 @@ function getComputerChoice() {
 function getHumanChoice() {
     let answer = prompt("Enter rock, paper, or scissors").toLowerCase();
     if (!(answer === "paper" || answer === "rock" || answer === "scissors")) {
+        alert("Check your spelling ;)");
         return getHumanChoice();
     } else {
         return answer;
