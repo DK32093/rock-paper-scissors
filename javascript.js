@@ -42,12 +42,9 @@ function playRound (humanChoice, computerChoice) {
 
 // Create a function that plays 5 rounds, keeps score, and declares the results //
 function playGame () {
-    while (gameCount < 5) {
-        gameCount += 1;
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
     
     if (humanScore > computerScore) {
         console.log("Game over. You won the game!");
