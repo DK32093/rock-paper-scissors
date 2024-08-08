@@ -13,20 +13,20 @@ function getComputerChoice() {
 
 // Create function for a single round //
 function playRound (humanChoice, computerChoice) {
+    message = document.querySelector(".message");
+    score = document.querySelector(".score");
     if ((humanChoice === "rock" && computerChoice === "scissors") 
         || (humanChoice === "paper" && computerChoice === "rock") 
         || (humanChoice === "scissors" && computerChoice === "paper")) {
         humanScore += 1;
-        console.log("You win! " + humanChoice + " beats " + computerChoice + ".");
+        message.textContent = "You win! " + humanChoice + " beats " + computerChoice + ".";
     } else if (humanChoice === computerChoice) {
-        humanScore += 1;
-        computerScore += 1;
-        console.log("It's a tie!");
+        message.textContent = "It's a tie!";
     } else {
         computerScore += 1;
-        console.log("You lose! " + computerChoice + " beats " + humanChoice + ".");
+        message.textContent = "You lose! " + computerChoice + " beats " + humanChoice + ".";
     }
-    console.log("Your score = " + humanScore + "," + " Computer's score = " + computerScore)
+    score.textContent = "Your score = " + humanScore + "," + " Computer's score = " + computerScore;
 }
 
 
