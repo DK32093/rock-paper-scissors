@@ -11,6 +11,22 @@ function getComputerChoice() {
     }
 }
 
+// Event listener for button choice
+let choices = document.querySelector(".choices");
+choices.addEventListener("click", (event) => {
+    let target = event.target;
+    if (target.class = "rock") {
+        let humanSelection = "rock";
+        return humanSelection;
+    } else if (target.class = "paper") {
+        let humanSelection = "paper";
+        return humanSelection;
+    } else {
+        let humanSelection = "scissors";
+        return humanSelection;
+    }
+});
+
 // Create human choice function that won't accept the wrong answer//
 function getHumanChoice() {
     let answer = prompt("Enter rock, paper, or scissors").toLowerCase();
